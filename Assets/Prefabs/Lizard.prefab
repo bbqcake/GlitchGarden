@@ -22,6 +22,9 @@ GameObject:
   - component: {fileID: 212389905709869986}
   - component: {fileID: 95548737025151916}
   - component: {fileID: 114522371637949584}
+  - component: {fileID: 50624564940605594}
+  - component: {fileID: 61722723301475862}
+  - component: {fileID: 114957076040409332}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Untagged
@@ -36,12 +39,57 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1787766944493272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.04, y: 3.01, z: 0}
+  m_LocalPosition: {x: 7.1657043, y: 2.373028, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50624564940605594
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787766944493272}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61722723301475862
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787766944493272}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.62047505, y: -0.29497957}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.51, y: 1.86}
+    newSize: {x: 0.83, y: 0.88}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.67909, y: 0.80214167}
+  m_EdgeRadius: 0
 --- !u!95 &95548737025151916
 Animator:
   serializedVersion: 3
@@ -71,7 +119,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d1e86d91dcd734b9b39f59e11acaaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 1
+--- !u!114 &114957076040409332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787766944493272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e63dcce6bcfa4b41bc3c8c49ef71d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  deathVFX: {fileID: 1906222994913036, guid: 740c2b3187d56c341b8cb78e8aa925c5, type: 2}
 --- !u!212 &212389905709869986
 SpriteRenderer:
   m_ObjectHideFlags: 1
