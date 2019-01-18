@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4567374646811232}
   - component: {fileID: 114981095037755080}
+  - component: {fileID: 95286039773648266}
+  - component: {fileID: 114557122926675202}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -51,8 +53,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4992793879411246}
   - component: {fileID: 212010617751051296}
-  - component: {fileID: 95896102868668480}
-  - component: {fileID: 114309792201690208}
   m_Layer: 0
   m_Name: CactusBody
   m_TagString: Untagged
@@ -101,16 +101,16 @@ Transform:
   m_Father: {fileID: 4567374646811232}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95896102868668480
+--- !u!95 &95286039773648266
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1750504694192604}
+  m_GameObject: {fileID: 1137161460950214}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5cf30e3d37393454686af5ed36651f9f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 24a1e1f85e48e834592af0e2e51b460a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -119,12 +119,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114309792201690208
+--- !u!114 &114557122926675202
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1750504694192604}
+  m_GameObject: {fileID: 1137161460950214}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f73beddc46f98a44a02284d07cea5f7, type: 3}
