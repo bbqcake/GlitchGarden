@@ -7,24 +7,25 @@ public class Shooter : MonoBehaviour
 	[SerializeField] GameObject projectile;
 	[SerializeField] GameObject gun;
 	AttackerSpawner myLanespawner;
+	Animator animator;
 
 	// Use this for initialization
 	void Start () 
 	{
 		SetLaneSpawner();
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		if(IsAttackerInLane())
-		{
-			Debug.Log("Shoot pew pew");
-			// TODO change animation state to shooting
+		{			
+			animator.SetBool("IsAttacking", true);
 		}
 		else
-		{
-			Debug.Log("Sit and wait");
+		{			
+			animator.SetBool("IsAttacking", false);
 		}
 	}
 
