@@ -16,6 +16,16 @@ public class Attacker : MonoBehaviour
 		UpdateAnimationState();
 	}
 
+	void Awake()
+	{
+		FindObjectOfType<LevelController>().AttackerSpawned();
+	}
+
+	void OnDestroy()
+	{
+		FindObjectOfType<LevelController>().AttackerKilled();
+	}
+
 	private void UpdateAnimationState()
 	{
 		if(!currentTarget)

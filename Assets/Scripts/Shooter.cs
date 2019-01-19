@@ -35,7 +35,7 @@ public class Shooter : MonoBehaviour
 
 		foreach(AttackerSpawner spawner in spawners)
 		{
-			bool IsCloseEnough = (Mathf.Abs(spawner.transform.position.y - transform.position.y) <= Mathf.Epsilon); // close to 0.
+			bool IsCloseEnough = (Mathf.Abs(spawner.transform.position.y - transform.position.y) <= Mathf.Epsilon); // close to 0. // TODO work out top lanes are always attacking
 
 			if(IsCloseEnough)
 			{
