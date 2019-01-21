@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,16 +9,30 @@ public class Shooter : MonoBehaviour
 	[SerializeField] GameObject gun;
 	AttackerSpawner myLanespawner;
 	Animator animator;
+	GameObject projectileParent;
+
+	const string PROJECTILE_PARENT_NAME = "Projectiles";
 
 	// Use this for initialization
 	void Start () 
 	{
 		SetLaneSpawner();
 		animator = GetComponent<Animator>();
+		CreateProjectileParent();
 	}
-	
-	// Update is called once per frame
-	void Update () 
+
+    private void CreateProjectileParent()
+    {
+        projectileParent = GameObject.Find(PROJECTILE_PARENT_NAME);
+
+		if(!projectileParent)
+		{
+			projectileParent = new GameObject(PROJECTILE_PARENT_NAME);
+		}
+    }
+
+    // Update is called once per frame
+    void Update () 
 	{
 		if(IsAttackerInLane())
 		{			
@@ -58,6 +73,7 @@ public class Shooter : MonoBehaviour
 
 	public void Fire()
 	{
-		Instantiate(projectile, gun.transform.position, Quaternion.identity);
+		GameObject newProjectile = Instantiate(projectile, gun.transform.position, Quaternion.identity) as GameObject; // we turn it into gameobject so we can parent it to others
+		newProjectile.transform.parent = projectileParent.transform;
 	}
 }

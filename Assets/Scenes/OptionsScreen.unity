@@ -198,12 +198,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &255475975 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114594524869717292, guid: f46afad5b45237740a1c25624f1f9a49,
-    type: 2}
-  m_PrefabInternal: {fileID: 1257228806}
-  m_Script: {fileID: 11500000, guid: 07d9cfb8e99475542b5f93c643085804, type: 3}
 --- !u!1 &409384574
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +342,58 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410012055}
   m_CullTransparentMesh: 0
+--- !u!1001 &456766877
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4514094307093258, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514094307093258, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514094307093258, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514094307093258, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514094307093258, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514094307093258, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514094307093258, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514094307093258, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114231247803160538, guid: a4bc973f29bf9a14191150d30b8ab022,
+        type: 2}
+      propertyPath: volumeSlider
+      value: 
+      objectReference: {fileID: 170580746}
+    - target: {fileID: 114231247803160538, guid: a4bc973f29bf9a14191150d30b8ab022,
+        type: 2}
+      propertyPath: difficultySlider
+      value: 
+      objectReference: {fileID: 1801329151}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4bc973f29bf9a14191150d30b8ab022, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &530421777
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,8 +578,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 255475975}
-        m_MethodName: LoadMainMenu
+      - m_Target: {fileID: 1170860670}
+        m_MethodName: SaveAndExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -791,7 +837,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 886790826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1170860670}
+        m_MethodName: SetDefaults
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &886790826
@@ -943,6 +1000,12 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1110414524}
   m_CullTransparentMesh: 0
+--- !u!114 &1170860670 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114231247803160538, guid: a4bc973f29bf9a14191150d30b8ab022,
+    type: 2}
+  m_PrefabInternal: {fileID: 456766877}
+  m_Script: {fileID: 11500000, guid: f998939198e569041b2f002306088e0a, type: 3}
 --- !u!1 &1185289370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1423,52 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1584492908
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4361276607334034, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361276607334034, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361276607334034, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361276607334034, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361276607334034, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361276607334034, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361276607334034, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4361276607334034, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509026970180242, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+      propertyPath: m_Name
+      value: MusicPlayer delete me
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d1274ddf55a50e54a83de9eda013876c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1752507823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,9 +1654,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1879200494}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0.523
+  m_MaxValue: 3
+  m_WholeNumbers: 1
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
